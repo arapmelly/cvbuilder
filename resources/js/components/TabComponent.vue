@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav>
-      <div class="row nav nav-tabs" id="nav-tab" role="tablist">
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <a
           class="nav-item nav-link active"
           id="nav-personal-tab"
@@ -75,7 +75,7 @@
       </div>
     </nav>
 
-    
+
   </div>
 </template>
 

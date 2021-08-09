@@ -1,7 +1,7 @@
 <template>
 
     <div>
-         <tab-component :resume="resume"></tab-component>
+<!--         <tab-component :resume="resume"></tab-component>-->
         <div class="row">
             <div class="col-4">
                 <editor-component :resume="resume"></editor-component>

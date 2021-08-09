@@ -39518,29 +39518,23 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("tab-component", { attrs: { resume: _vm.resume } }),
+  return _c("div", [
+    _c("div", { staticClass: "row" }, [
+      _c(
+        "div",
+        { staticClass: "col-4" },
+        [_c("editor-component", { attrs: { resume: _vm.resume } })],
+        1
+      ),
       _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          { staticClass: "col-4" },
-          [_c("editor-component", { attrs: { resume: _vm.resume } })],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "col-8 bg-white", attrs: { id: "pdf" } },
-          [_c("preview-component", { attrs: { resume: _vm.resume } })],
-          1
-        )
-      ])
-    ],
-    1
-  )
+      _c(
+        "div",
+        { staticClass: "col-8 bg-white", attrs: { id: "pdf" } },
+        [_c("preview-component", { attrs: { resume: _vm.resume } })],
+        1
+      )
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -39926,7 +39920,7 @@ var staticRenderFns = [
         _c(
           "div",
           {
-            staticClass: "row nav nav-tabs",
+            staticClass: "nav nav-tabs",
             attrs: { id: "nav-tab", role: "tablist" }
           },
           [
@@ -40600,7 +40594,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row input-group mt-3" }, [
+  return _c("div", { staticClass: "input-group mt-3" }, [
     _c("textarea", {
       directives: [
         {
@@ -40652,7 +40646,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "row input-group mb-3 mt-3" }, [
+    _c("div", { staticClass: "input-group mb-3 mt-3" }, [
       _c("input", {
         directives: [
           {
@@ -40676,7 +40670,7 @@ var render = function() {
       })
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "row input-group mb-3" }, [
+    _c("div", { staticClass: "input-group mb-3" }, [
       _c("input", {
         directives: [
           {
@@ -40700,7 +40694,7 @@ var render = function() {
       })
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "row input-group mb-3" }, [
+    _c("div", { staticClass: "input-group mb-3" }, [
       _c("input", {
         directives: [
           {
@@ -40724,7 +40718,7 @@ var render = function() {
       })
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "row input-group mb-3" }, [
+    _c("div", { staticClass: "input-group mb-3" }, [
       _c("input", {
         directives: [
           {
@@ -40748,7 +40742,7 @@ var render = function() {
       })
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "row input-group mb-3" }, [
+    _c("div", { staticClass: "input-group mb-3" }, [
       _c("input", {
         directives: [
           {

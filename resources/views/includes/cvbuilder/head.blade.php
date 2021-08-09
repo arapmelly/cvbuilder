@@ -17,18 +17,19 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Josefin+Sans|Sarala" rel="stylesheet">
 
-   
+
     <!-- Vue Js  -->
     {{-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script> --}}
 
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}" />   
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}" />
     {{-- <script src="{{ mix('/js/app.js') }}"></script> --}}
     {{-- <script src="{{ asset('/js/app.js') }}"><script> --}}
 
     <!-- html to pdf cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
-    
+
     <!-- files required by star rating -->
     <!-- <link rel="stylesheet" href="css/style.css" > -->
 
@@ -60,6 +61,6 @@
             padding:2%;
             background-color: #222;
         }
-        
+
     </style>
 </head>
