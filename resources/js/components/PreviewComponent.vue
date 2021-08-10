@@ -94,7 +94,7 @@ export default {
   name: "PreviewComponent",
   props: {
       resume: {
-        type: Array,
+        type: Object,
         required: true
       }
     }

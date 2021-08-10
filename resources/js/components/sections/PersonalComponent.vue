@@ -56,7 +56,7 @@ export default {
   },
   data: function () {
       return {
-        name: this.personal.name,
+        name: this.resume.basics.name,
       }
   },
   methods:{
