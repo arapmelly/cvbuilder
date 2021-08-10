@@ -24,7 +24,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('cvbuilder-component', require('./components/CVBuilderComponent.vue').default);
 Vue.component('editor-component', require('./components/EditorComponent.vue').default);
 Vue.component('preview-component', require('./components/PreviewComponent.vue').default);
-
+Vue.component('tab-component', require('./components/TabComponent.vue').default);
 
 Vue.component('personal-component', require('./components/sections/PersonalComponent.vue').default);
 Vue.component('objective-component', require('./components/sections/ObjectiveComponent.vue').default);

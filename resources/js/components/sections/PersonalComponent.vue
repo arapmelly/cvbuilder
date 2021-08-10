@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row input-group mb-3 mt-3">
+    <div class="input-group mb-3 mt-3">
       <input
         type="text"
         class="form-control"
@@ -8,7 +8,7 @@
         v-model="resume.basics.name"
       />
     </div>
-    <div class="row input-group mb-3">
+    <div class="input-group mb-3">
       <input
         type="text"
         class="form-control"
@@ -16,7 +16,7 @@
         v-model="resume.basics.label"
       />
     </div>
-    <div class="row input-group mb-3">
+    <div class="input-group mb-3">
       <input
         type="text"
         class="form-control"
@@ -24,7 +24,7 @@
         v-model="resume.basics.location.address"
       />
     </div>
-    <div class="row input-group mb-3">
+    <div class="input-group mb-3">
       <input
         type="text"
         class="form-control"
@@ -32,7 +32,7 @@
         v-model="resume.basics.phone"
       />
     </div>
-    <div class="row input-group mb-3">
+    <div class="input-group mb-3">
       <input
         type="text"
         class="form-control"

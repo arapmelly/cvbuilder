@@ -4,7 +4,12 @@
 
 
     <div class="jumbotron jumbotron-fluid">
-        <div class="container" >
+        <div class="cv-tabs">
+            <div class="container">
+                <tab-component></tab-component>
+            </div>
+        </div>
+        <div class="container cv-preview" >
             <cvbuilder-component :resume_data="{{$resumeData}}"></cvbuilder-component>
         </div>
     </div>

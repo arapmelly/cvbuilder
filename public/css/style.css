@@ -2,6 +2,7 @@ body {
     font-family: 'Varela Round', 'Roboto', 'Helvetica', 'sans-serif';
 }
 
+.nav-tabs{border:0 none;}
 .navbar {
     transition: 500ms ease;
     background: transparent !important;
