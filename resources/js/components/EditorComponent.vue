@@ -4,7 +4,7 @@
 
     <div class="tab-content" id="nav-tabContent">
       <div
-        class="tab-pane fade show active"
+        class="tab-pane fade show "
         id="nav-personal"
         role="tabpanel"
         aria-labelledby="nav-personal-tab"

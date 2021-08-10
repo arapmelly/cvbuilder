@@ -3,7 +3,7 @@
     <nav>
       <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <a
-          class="nav-item nav-link active"
+          class="nav-item nav-link "
           id="nav-personal-tab"
           data-toggle="tab"
           href="#nav-personal"

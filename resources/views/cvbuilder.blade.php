@@ -6,7 +6,7 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="cv-tabs">
             <div class="container">
-                <tab-component :resume="resume"></tab-component>
+                <tab-component></tab-component>
             </div>
         </div>
         <div class="container cv-preview" >

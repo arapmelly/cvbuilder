@@ -39522,14 +39522,17 @@ var render = function() {
     _c("div", { staticClass: "row" }, [
       _c(
         "div",
-        { staticClass: "col-4" },
+        { staticClass: "col-lg-4 col-md-4 mt-5" },
         [_c("editor-component", { attrs: { resume: _vm.resume } })],
         1
       ),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "col-8 bg-white", attrs: { id: "pdf" } },
+        {
+          staticClass: "col-lg-8 col-md-4 col-sm-12 bg-white mt-5 px-3 py-5",
+          attrs: { id: "pdf" }
+        },
         [_c("preview-component", { attrs: { resume: _vm.resume } })],
         1
       )
@@ -39564,7 +39567,7 @@ var render = function() {
       _c(
         "div",
         {
-          staticClass: "tab-pane fade show active",
+          staticClass: "tab-pane fade show ",
           attrs: {
             id: "nav-personal",
             role: "tabpanel",
@@ -39927,7 +39930,7 @@ var staticRenderFns = [
             _c(
               "a",
               {
-                staticClass: "nav-item nav-link active",
+                staticClass: "nav-item nav-link ",
                 attrs: {
                   id: "nav-personal-tab",
                   "data-toggle": "tab",
