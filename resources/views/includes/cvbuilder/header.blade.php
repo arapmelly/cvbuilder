@@ -27,8 +27,13 @@
                             <a class="nav-link" href="index.html#contact">Contact</a>
                         </li> --}}
                         <a href="javascript:genPDF()">
-                            <button type="button" class="btn btn-success">Download</button>
+                            <button type="button"  class="btn btn-success">Download</button>
                         </a>
+
+                         <a href="{{ route('ticket') }}">
+                         <button type="button"  class="btn btn-success">Pay</button>
+                         </a>
+                         
                     </ul>
                 </div>
             </div>
