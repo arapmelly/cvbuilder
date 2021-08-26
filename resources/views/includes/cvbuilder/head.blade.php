@@ -4,7 +4,7 @@
 
      <title>cvmama | cv builder</title>
 
-     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
+     <link rel="stylesheet" href="{{secure_asset('css/style.css')}}" />
     {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous"> --}}
     {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -22,7 +22,7 @@
     {{-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script> --}}
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
-    <link rel="stylesheet" href="{{asset('css/custom.css')}}" />
+    <link rel="stylesheet" href="{{secure_asset('css/custom.css')}}" />
     {{-- <script src="{{ mix('/js/app.js') }}"></script> --}}
     {{-- <script src="{{ asset('/js/app.js') }}"><script> --}}
 

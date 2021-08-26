@@ -2130,7 +2130,7 @@ __webpack_require__.r(__webpack_exports__);
   name: "PreviewComponent",
   props: {
     resume: {
-      type: Array,
+      type: Object,
       required: true
     }
   }
@@ -2232,12 +2232,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "EditorComponent",
-  props: {
-    resume: {
-      type: Object,
-      required: true
-    }
-  }
+  props: {}
 });
 
 /***/ }),
@@ -2608,7 +2603,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      name: this.personal.name
+      name: this.resume.basics.name
     };
   },
   methods: {
