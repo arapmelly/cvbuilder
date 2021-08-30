@@ -43,7 +43,7 @@
 
     <div class="form-group mb-3">
 
-      <button class="btn btn-danger float-left" v-on:click="closeEditor()">cancel </button> 
+      <button class="btn btn-danger float-left" v-on:click="closeEditor()">close </button> 
 
       <button class="btn btn-primary float-right" v-on:click="saveResume()">save </button> 
 
@@ -66,7 +66,7 @@ export default {
   },
   data: function () {
       return {
-        name: this.personal.name,
+        name: this.resume.basics.name,
       }
   },
   methods:{
@@ -75,8 +75,16 @@ export default {
       },
 
       saveResume: function(){
+        localStorage.setItem('resumedata', JSON.stringify(this.resume));
+        $('.active').removeClass('active'); 
          
-         
+      },
+      closeEditor: function(event){
+
+        //e.preventDefault()
+        //$('.nav-personal a').tab('dispose')
+
+        $('.active').removeClass('active');
       }
   }
 };

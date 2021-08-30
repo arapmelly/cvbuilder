@@ -82,11 +82,6 @@
 <script>
 export default {
   name: "EditorComponent",
-  props: {
-    resume: {
-      type: Object,
-      required: true,
-    },
-  },
+  
 };
 </script>

@@ -114,6 +114,16 @@
     </div>
   </div>
 
+
+  <div class="form-group mt-3 mb-3">
+
+      <button class="btn btn-danger float-left" v-on:click="closeEditor()">close </button> 
+
+      <button class="btn btn-primary float-right" v-on:click="saveResume()">save </button> 
+
+      
+    </div>
+
    
 
  
@@ -148,21 +158,21 @@ export default {
         this.resume.skills.push({ name: this.fields.name, level: this.fields.level, keywords: this.fields.keywords } )
     },
     remove(skill){
-
       
         this.resume.skills.splice(this.resume.skills.indexOf(skill), 1);
-        //this.$delete(this.resume.skills, index)
-    }
-    // submit() {
-    //   this.errors = {};
-    //   axios.post('/resume/skills/create', this.fields).then(response => {
-    //     this.skills = response.data
-    //   }).catch(error => {
-    //     if (error.response.status === 422) {
-    //       this.errors = error.response.data.errors || {};
-    //     }
-    //   });
-    // },
+        
+    },
+
+    saveResume: function(){
+        localStorage.setItem('resumedata', JSON.stringify(this.resume));
+        $('.active').removeClass('active'); 
+         
+      },
+      closeEditor: function(event){
+
+        $('.active').removeClass('active');
+      }
+    
   }
 };
 </script>
