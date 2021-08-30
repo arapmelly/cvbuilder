@@ -27,9 +27,22 @@ export default {
     },
     data() {
         return {
-            resume: this.resume_data
+            resume: (localStorage.getItem('resumedata') !== null) ? JSON.parse(localStorage.getItem('resumedata')) : this.resume_data
         }
     },
+    mounted(){
+
+        //check if resumedata exists in localstorage
+        if(localStorage.getItem('resumedata') !== null){
+            console.log('data exists');
+            this.resume = JSON.parse(localStorage.getItem('resumedata'));
+        } else {
+            console.log('no data exists');
+            localStorage.setItem('resumedata', JSON.stringify(this.resume_data));
+             this.resume = JSON.parse(localStorage.getItem('resumedata'));
+        }
+    }
+
 }
 </script>
 

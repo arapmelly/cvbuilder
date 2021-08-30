@@ -82,8 +82,12 @@
 <script>
 export default {
   name: "EditorComponent",
+<<<<<<< HEAD
+  
+=======
   props: {
     
   },
+>>>>>>> fd33bd0c3374043efa4a196f3f39a6130c2be3bc
 };
 </script>

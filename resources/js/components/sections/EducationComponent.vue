@@ -204,6 +204,14 @@
   </div>
 
    
+   <div class="form-group mt-3 mb-3">
+
+      <button class="btn btn-danger float-left" v-on:click="closeEditor()">close </button> 
+
+      <button class="btn btn-primary float-right" v-on:click="saveResume()">save </button> 
+
+      
+    </div>
 
  
   
@@ -250,7 +258,16 @@ export default {
       
         this.resume.education.splice(this.resume.education.indexOf(education), 1);
        
-    }
+    },
+    saveResume: function(){
+        localStorage.setItem('resumedata', JSON.stringify(this.resume));
+        $('.active').removeClass('active'); 
+         
+      },
+      closeEditor: function(event){
+
+        $('.active').removeClass('active');
+      }
     
   }
 };

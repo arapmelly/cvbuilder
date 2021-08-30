@@ -40,6 +40,16 @@
         v-model="resume.basics.email"
       />
     </div>
+
+    <div class="form-group mb-3">
+
+      <button class="btn btn-danger float-left" v-on:click="closeEditor()">close </button> 
+
+      <button class="btn btn-primary float-right" v-on:click="saveResume()">save </button> 
+
+      
+    </div>
+
   </div>
 </template>
 
@@ -62,6 +72,19 @@ export default {
   methods:{
       updateName: function(event){
          this.$emit("update-personal-name", 'Jacob Chumo') ;
+      },
+
+      saveResume: function(){
+        localStorage.setItem('resumedata', JSON.stringify(this.resume));
+        $('.active').removeClass('active'); 
+         
+      },
+      closeEditor: function(event){
+
+        //e.preventDefault()
+        //$('.nav-personal a').tab('dispose')
+
+        $('.active').removeClass('active');
       }
   }
 };
