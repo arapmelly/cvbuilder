@@ -40,6 +40,16 @@
         v-model="resume.basics.email"
       />
     </div>
+
+    <div class="form-group mb-3">
+
+      <button class="btn btn-danger float-left" v-on:click="closeEditor()">cancel </button> 
+
+      <button class="btn btn-primary float-right" v-on:click="saveResume()">save </button> 
+
+      
+    </div>
+
   </div>
 </template>
 
@@ -62,6 +72,11 @@ export default {
   methods:{
       updateName: function(event){
          this.$emit("update-personal-name", 'Jacob Chumo') ;
+      },
+
+      saveResume: function(){
+         
+         
       }
   }
 };
