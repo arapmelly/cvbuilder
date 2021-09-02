@@ -7,7 +7,7 @@
                 <editor-component :resume="resume"></editor-component>
             </div>
 
-            <div class="col-lg-8 col-md-4 col-sm-12 bg-white mt-5 px-3 py-5" id="pdf">
+            <div class="col-lg-8 col-md-8 col-sm-12 bg-white mt-2 px-3 py-2" id="pdf" style="margin-bottom: 10px">
 
                 <preview-component :resume="resume"></preview-component>
             </div>

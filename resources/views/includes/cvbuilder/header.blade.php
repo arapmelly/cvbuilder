@@ -26,9 +26,9 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="index.html#contact">Contact</a>
                         </li> --}}
-                        <a href="javascript:genPDF()">
+                        {{-- <a href="javascript:genPDF()">
                             <button type="button" class="btn btn-success">Download</button>
-                        </a>
+                        </a> --}}
                     </ul>
                 </div>
             </div>

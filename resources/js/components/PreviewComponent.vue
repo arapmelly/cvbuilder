@@ -1,7 +1,7 @@
 <template>
    
 
-    <div>
+    <div class="canvas_div_pdf">
 
          <br>
                         <h4>{{ resume.basics.name }}</h4>

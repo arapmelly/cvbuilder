@@ -22,7 +22,8 @@
     {{-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script> --}}
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
-    <link rel="stylesheet" href="{{asset('css/custom.css')}}" />
+    <link rel="stylesheet" href="{{secure_asset('css/custom.css')}}" />
+    <link rel="stylesheet" href="{{secure_asset('css/footer.css')}}" />
     {{-- <script src="{{ mix('/js/app.js') }}"></script> --}}
     {{-- <script src="{{ asset('/js/app.js') }}"><script> --}}
 
