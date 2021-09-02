@@ -1873,8 +1873,19 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      resume: this.resume_data
+      resume: localStorage.getItem('resumedata') !== null ? JSON.parse(localStorage.getItem('resumedata')) : this.resume_data
     };
+  },
+  mounted: function mounted() {
+    //check if resumedata exists in localstorage
+    if (localStorage.getItem('resumedata') !== null) {
+      console.log('data exists');
+      this.resume = JSON.parse(localStorage.getItem('resumedata'));
+    } else {
+      console.log('no data exists');
+      localStorage.setItem('resumedata', JSON.stringify(this.resume_data));
+      this.resume = JSON.parse(localStorage.getItem('resumedata'));
+    }
   }
 });
 
@@ -2130,7 +2141,7 @@ __webpack_require__.r(__webpack_exports__);
   name: "PreviewComponent",
   props: {
     resume: {
-      type: Array,
+      type: Object,
       required: true
     }
   }
@@ -2232,12 +2243,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "EditorComponent",
-  props: {
-    resume: {
-      type: Object,
-      required: true
-    }
-  }
+  props: {}
 });
 
 /***/ }),
@@ -2253,6 +2259,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2498,6 +2512,13 @@ __webpack_require__.r(__webpack_exports__);
     },
     remove: function remove(education) {
       this.resume.education.splice(this.resume.education.indexOf(education), 1);
+    },
+    saveResume: function saveResume() {
+      localStorage.setItem('resumedata', JSON.stringify(this.resume));
+      $('.active').removeClass('active');
+    },
+    closeEditor: function closeEditor(event) {
+      $('.active').removeClass('active');
     }
   }
 });
@@ -2526,6 +2547,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log("Component mounted.");
@@ -2534,6 +2570,15 @@ __webpack_require__.r(__webpack_exports__);
     resume: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    saveResume: function saveResume() {
+      localStorage.setItem('resumedata', JSON.stringify(this.resume));
+      $('.active').removeClass('active');
+    },
+    closeEditor: function closeEditor(event) {
+      $('.active').removeClass('active');
     }
   }
 });
@@ -2596,6 +2641,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log("Component mounted.");
@@ -2608,12 +2663,21 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      name: this.personal.name
+      name: this.resume.basics.name
     };
   },
   methods: {
     updateName: function updateName(event) {
       this.$emit("update-personal-name", 'Jacob Chumo');
+    },
+    saveResume: function saveResume() {
+      localStorage.setItem('resumedata', JSON.stringify(this.resume));
+      $('.active').removeClass('active');
+    },
+    closeEditor: function closeEditor(event) {
+      //e.preventDefault()
+      //$('.nav-personal a').tab('dispose')
+      $('.active').removeClass('active');
     }
   }
 });
@@ -2631,6 +2695,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2783,6 +2855,13 @@ __webpack_require__.r(__webpack_exports__);
     },
     remove: function remove(reference) {
       this.resume.references.splice(this.resume.references.indexOf(reference), 1);
+    },
+    saveResume: function saveResume() {
+      localStorage.setItem('resumedata', JSON.stringify(this.resume));
+      $('.active').removeClass('active');
+    },
+    closeEditor: function closeEditor(event) {
+      $('.active').removeClass('active');
     }
   }
 });
@@ -2800,6 +2879,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2952,18 +3041,15 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     remove: function remove(skill) {
-      this.resume.skills.splice(this.resume.skills.indexOf(skill), 1); //this.$delete(this.resume.skills, index)
-    } // submit() {
-    //   this.errors = {};
-    //   axios.post('/resume/skills/create', this.fields).then(response => {
-    //     this.skills = response.data
-    //   }).catch(error => {
-    //     if (error.response.status === 422) {
-    //       this.errors = error.response.data.errors || {};
-    //     }
-    //   });
-    // },
-
+      this.resume.skills.splice(this.resume.skills.indexOf(skill), 1);
+    },
+    saveResume: function saveResume() {
+      localStorage.setItem('resumedata', JSON.stringify(this.resume));
+      $('.active').removeClass('active');
+    },
+    closeEditor: function closeEditor(event) {
+      $('.active').removeClass('active');
+    }
   }
 });
 
@@ -2980,6 +3066,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3207,6 +3301,13 @@ __webpack_require__.r(__webpack_exports__);
     },
     remove: function remove(work) {
       this.resume.work.splice(this.resume.work.indexOf(work), 1);
+    },
+    saveResume: function saveResume() {
+      localStorage.setItem('resumedata', JSON.stringify(this.resume));
+      $('.active').removeClass('active');
+    },
+    closeEditor: function closeEditor(event) {
+      $('.active').removeClass('active');
     }
   }
 });
@@ -39567,7 +39668,7 @@ var render = function() {
       _c(
         "div",
         {
-          staticClass: "tab-pane fade show ",
+          staticClass: "tab-pane fade show active",
           attrs: {
             id: "nav-personal",
             role: "tabpanel",
@@ -40529,7 +40630,35 @@ var render = function() {
               )
             ]
           )
-        })
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group mt-3 mb-3" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-danger float-left",
+              on: {
+                click: function($event) {
+                  return _vm.closeEditor()
+                }
+              }
+            },
+            [_vm._v("close ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary float-right",
+              on: {
+                click: function($event) {
+                  return _vm.saveResume()
+                }
+              }
+            },
+            [_vm._v("save ")]
+          )
+        ])
       ],
       2
     )
@@ -40597,32 +40726,62 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "input-group mt-3" }, [
-    _c("textarea", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.resume.basics.summary,
-          expression: "resume.basics.summary"
-        }
-      ],
-      staticClass: "form-control",
-      attrs: {
-        rows: "4",
-        placeholder: "Short description of yourself",
-        "aria-label": "With textarea"
-      },
-      domProps: { value: _vm.resume.basics.summary },
-      on: {
-        input: function($event) {
-          if ($event.target.composing) {
-            return
+  return _c("div", [
+    _c("div", { staticClass: "input-group mt-3" }, [
+      _c("textarea", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.resume.basics.summary,
+            expression: "resume.basics.summary"
           }
-          _vm.$set(_vm.resume.basics, "summary", $event.target.value)
+        ],
+        staticClass: "form-control",
+        attrs: {
+          rows: "4",
+          placeholder: "Short description of yourself",
+          "aria-label": "With textarea"
+        },
+        domProps: { value: _vm.resume.basics.summary },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.resume.basics, "summary", $event.target.value)
+          }
         }
-      }
-    })
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group mt-3 mb-3" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-danger float-left",
+          on: {
+            click: function($event) {
+              return _vm.closeEditor()
+            }
+          }
+        },
+        [_vm._v("close ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary float-right",
+          on: {
+            click: function($event) {
+              return _vm.saveResume()
+            }
+          }
+        },
+        [_vm._v("save ")]
+      )
+    ])
   ])
 }
 var staticRenderFns = []
@@ -40767,6 +40926,34 @@ var render = function() {
           }
         }
       })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group mb-3" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-danger float-left",
+          on: {
+            click: function($event) {
+              return _vm.closeEditor()
+            }
+          }
+        },
+        [_vm._v("close ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary float-right",
+          on: {
+            click: function($event) {
+              return _vm.saveResume()
+            }
+          }
+        },
+        [_vm._v("save ")]
+      )
     ])
   ])
 }
@@ -41037,7 +41224,35 @@ var render = function() {
               ]
             )
           ])
-        })
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group mt-3 mb-3" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-danger float-left",
+              on: {
+                click: function($event) {
+                  return _vm.closeEditor()
+                }
+              }
+            },
+            [_vm._v("close ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary float-right",
+              on: {
+                click: function($event) {
+                  return _vm.saveResume()
+                }
+              }
+            },
+            [_vm._v("save ")]
+          )
+        ])
       ],
       2
     )
@@ -41346,7 +41561,35 @@ var render = function() {
               ]
             )
           ])
-        })
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group mt-3 mb-3" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-danger float-left",
+              on: {
+                click: function($event) {
+                  return _vm.closeEditor()
+                }
+              }
+            },
+            [_vm._v("close ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary float-right",
+              on: {
+                click: function($event) {
+                  return _vm.saveResume()
+                }
+              }
+            },
+            [_vm._v("save ")]
+          )
+        ])
       ],
       2
     )
@@ -41827,7 +42070,35 @@ var render = function() {
               ]
             )
           ])
-        })
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group mt-3 mb-3" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-danger float-left",
+              on: {
+                click: function($event) {
+                  return _vm.closeEditor()
+                }
+              }
+            },
+            [_vm._v("close ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary float-right",
+              on: {
+                click: function($event) {
+                  return _vm.saveResume()
+                }
+              }
+            },
+            [_vm._v("save ")]
+          )
+        ])
       ],
       2
     )
